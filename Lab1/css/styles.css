@@ -1,0 +1,160 @@
+/* Font - Momcake */
+@font-face {
+	font-family: "Momcake";
+	src: url(../fonts/Momcake/MomcakeBold.otf) format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Momcake";
+	src: url(../fonts/Momcake/MomcakeThin.otf) format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Layout Classes */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--clr-primary: #4543af;
+	--clr-primary-accent: #5654bd;
+}
+
+.container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Navbar */
+.top-navbar {
+	background-color: var(--clr-primary);
+	margin: 0;
+	padding: 0.25rem;
+}
+.brand-name {
+	font-family: "Momcake", sans-serif;
+	font-weight: normal;
+	font-size: 2rem;
+	margin: auto 0;
+	padding: 0;
+	color: white;
+}
+
+.top-navbar-menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-menu {
+	display: flex;
+}
+
+.nav-menu .nav-link {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	color: white;
+	list-style: none;
+	margin: auto 1em;
+}
+
+main {
+	margin-top: 1rem;
+}
+
+h1.section-header {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: normal;
+	font-size: 2.5rem;
+	margin: 0.5em 0;
+}
+
+ul.game-variants {
+	margin: 0;
+	padding: 0;
+}
+
+.game-variant {
+	border: var(--clr-primary) solid 1px;
+	border-radius: 0.375rem;
+	padding: 1em;
+	margin: 1em 0;
+	list-style: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.game-variant .title {
+	margin: 0.375em 0;
+}
+
+.game-variant .description {
+	margin: 0.75em 0;
+}
+
+.game-variant .read-more {
+	display: inline-block;
+	padding: 0.65em 0.5em;
+	background-color: var(--clr-primary);
+	color: white;
+	text-decoration: none;
+	border-radius: 0.25rem;
+	font-size: small;
+	transition: background-color ease 200ms;
+}
+
+.game-variant .read-more:hover {
+	background-color: var(--clr-primary-accent);
+}
+
+a,
+a:active,
+a:visited {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.rules-title {
+	line-height: 1.5;
+	margin: 0;
+}
+
+ol.rules {
+	margin: 0.5rem 0 1rem 1rem;
+	padding: 0;
+}
+.rules .rule {
+	line-height: 1.5;
+	font-size: 0.875em;
+}
+
+.moves-list {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	line-height: 1.25;
+	border: var(--clr-primary-accent) solid 1px;
+	border-radius: 0.25rem;
+	padding: 1rem;
+}
+
+dt.chess-piece {
+	font-weight: bold;
+	color: var(--clr-primary);
+}
+
+footer {
+	background-color: var(--clr-primary-accent);
+	padding: 1em;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	color: white;
+}
