@@ -158,3 +158,9 @@ footer {
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	color: white;
 }
+
+.chess-piece-img {
+	height: 100px;
+	width: auto;
+	box-shadow: 5px 5px 5px #ccc;
+}
