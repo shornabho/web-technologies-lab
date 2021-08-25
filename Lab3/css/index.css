@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.landing-page-banner {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.landing-page-banner img {
+	width: 100%;
+}
+
+section {
+	font-family: "Amazon Ember", Arial, sans-serif;
+	padding: 1rem;
+}
+
+section .section-header {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.books-gallery {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 1.2rem;
+}
+
+.book {
+	width: 12rem;
+	padding: 1em;
+}
+
+.book .book-cover {
+	width: 100%;
+	height: 15rem;
+	object-fit: contain;
+}
+
+.book .book-title {
+	margin-top: 0.5em;
+	font-size: 0.8rem;
+	font-weight: bold;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.book .book-author {
+	color: #555;
+	font-size: 0.8rem;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+.book .book-type {
+	color: #555;
+	font-size: 0.65rem;
+}
+
+.book .book-discounted-price {
+	font-size: 1.2rem;
+	margin: 0;
+}
+.book .book-discounted-price::before {
+	content: "₹ ";
+}
+
+#sign-in-modal {
+	font-family: "Amazon Ember", Arial, sans-serif;
+}
+#sign-in-modal .modal-title {
+	font-weight: bold;
+}

@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.top-navbar {
+	background-color: #131921;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 2%;
+	height: 3.5rem;
+	padding: 0.5rem;
+
+	font-family: "Amazon Ember", Arial, sans-serif;
+	font-weight: bold;
+	color: white;
+}
+
+.top-navbar .nav-brand {
+	display: flex;
+}
+
+.top-navbar .nav-brand img {
+	width: auto;
+	height: 80%;
+	padding: 0.2rem;
+	margin: auto 0;
+}
+
+.top-navbar .search-bar {
+	width: 50%;
+	font-family: "Amazon Ember", Arial, sans-serif;
+	margin: auto 0;
+}
+
+.top-navbar .delivery-location {
+	margin: auto 0;
+	padding: 0.2rem;
+}
+
+.top-navbar .language {
+	margin: auto 0;
+	font-weight: normal;
+}
+
+.top-navbar .language a {
+	color: inherit;
+	text-decoration: inherit;
+	font-family: inherit;
+	font-size: 0.9em;
+}
+
+.top-navbar .accounts-and-lists {
+	margin: auto 0;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.top-navbar .accounts-and-lists a.nav-link {
+	color: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.top-navbar .returns-and-orders {
+	margin: auto 0;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.top-navbar .cart {
+	margin: auto 0;
+	font-weight: normal;
+	display: inline-block;
+	font-size: 1.2rem;
+	margin-left: 1em;
+}
