@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessNest</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-navbar">
+            <nav class="container top-navbar-menu">
+                <h1 class="brand-name"><b>Chess</b>Nest</h1>
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="https://www.chess.com/" target="_blank">Play a Game</a></li>
+                    <li class="nav-link"><a href="https://www.chess.com/players" target="_blank">Leaderboard</a></li>
+                    <li class="nav-link"><a href="https://www.chess.com/about" target="_blank">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h1 class="section-header">Chess Moves</h1>
+                <hr>
+                <br>
+                <table class="chess-moves">
+                    <tr>
+                        <th colspan="3">All Chess Moves</th>
+                    </tr>
+                    <tr>
+                        <th>Image</th>
+                        <th>Piece</th>
+                        <th>Move</th>
+                    </tr>
+                    <tr id="kings">
+                        <td>
+                            <img class="chess-piece-img" src="./img/king.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Kings</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move one square in any direction, so long as that square is not attacked by an enemy
+                                piece.
+                                Additionally, kings are able to make a special move, known as castling.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="queens">
+                        <td>
+                            <img class="chess-piece-img" src="./img/queen.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Queens</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move diagonally, horizontally, or vertically any number of squares. They are unable to
+                                jump over pieces.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="rooks">
+                        <td>
+                            <img class="chess-piece-img" src="./img/rooks.jpeg" alt="" id="rooks">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Rooks</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move horizontally or vertically any number of squares. They are unable to jump over
+                                pieces. Rooks move when the king castles.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="bishops">
+                        <td>
+                            <img class="chess-piece-img" src="./img/bishops.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Bishops</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move diagonally any number of squares. They are unable to jump over pieces.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="knights">
+                        <td>
+                            <img class="chess-piece-img" src="./img/knights.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Knights</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move in an ‘L’ shape’: two squares in a horizontal or vertical direction, then move one
+                                square horizontally or vertically. They are the only piece able to jump over other
+                                pieces.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="pawns">
+                        <td>
+                            <img class="chess-piece-img" src="./img/pawns.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="chess-piece">Pawns</div>
+                        </td>
+                        <td>
+                            <div class="chess-move">
+                                move vertically forward one square, with the option to move two squares if they have not
+                                yet moved. Pawns are the only piece to capture different to how they move. Pawns capture
+                                one square diagonally in a forward direction.
+                                Pawns are unable to move backward on captures or moves. Upon reaching the other side of
+                                the board a pawn promotes into any other piece, except for a king. Additionally, pawns
+                                can make a special move named En Passant.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+            </section>
+            <section>
+                <h1 class="section-header">Chess Game Variants</h1>
+                <hr>
+                <ul class="game-variants">
+                    <li class="game-variant">
+                        <h2 class="title">Bughouse</h2>
+                        <p class="description">
+                            Bughouse is a variant of chess played by four players on two chessboards. Captured pieces
+                            may
+                            then be placed on an empty square by the partner on their turn.
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                When you capture one of your opponent's pieces, it is immediately passed to
+                                your teammate's "piece bank" for him or her to use at their discretion.
+                            </li>
+                            <li class="rule">
+                                On any turn, instead of making a move, a player can "drop" any piece from their "bank"
+                                to any open square on the board.
+                            </li>
+                            <li class="rule">
+                                Pawns may not be dropped on the 1st or 8th ranks.
+                            </li>
+                            <li class="rule">
+                                A pawn that is placed on the 2nd rank may move two squares on its first move, as in
+                                standard chess.
+                            </li>
+                            <li class="rule">
+                                Pawns that have promoted and are then captured go into the "bank" as pawns, not as the
+                                piece to which they promoted. Such promoted pieces are called "counterfeits."
+                            </li>
+                            <li class="rule">
+                                A bughouse game is over when a game on either board ends in checkmate, resignation, or
+                                timeout. There are no draws in bughouse.
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/349-bughouse" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                    <li class="game-variant">
+                        <h2 class="title">Crazyhouse</h2>
+                        <p class="description">
+                            Crazyhouse is a variant which follows most of the normal rules of chess, except that
+                            captured
+                            pieces can be reintroduced to the board on your turn. The pieces move the same way that they
+                            do
+                            in traditional chess.
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                Games can still end in the same way: checkmate, stalemate, and time-out.
+                            </li>
+                            <li class="rule">
+                                Captured pieces reverse their color and are added to the capturing player's "bank."
+                            </li>
+                            <li class="rule">
+                                On your turn, instead of making a move ,you may choose to "drop"a piece from your "bank"
+                                onto any open square on the board.
+                            </li>
+                            <li class="rule">
+                                You can drop a piece from your bank to block a check, even in a position that would
+                                otherwise have been checkmate (i.e. without the piece from your bank to drop).
+                            </li>
+                            <li class="rule">
+                                You may drop a piece to both check and checkmate the enemy king.
+                            </li>
+                            <li class="rule">
+                                Pawns may not be dropped on the 1st or 8th ranks.
+                            </li>
+                            <li class="rule">
+                                Pawns that have promoted and are then captured go into the bank as pawns, not as the
+                                piece they promoted to.
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/350-crazyhouse" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                    <li class="game-variant">
+                        <h2 class="title">3-Check</h2>
+                        <p class="description">
+                            3-Check is a simple variant with one clear task in mind: Check the king as many times as you
+                            can! Normal rules apply, but you can also win (or lose!) a game by checking (or getting
+                            checked)
+                            3 times in total.
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                Games can still end in the traditional ways of checkmate, stalemate and time-out.
+                            </li>
+                            <li class="rule">
+                                The game can also end if a player checks their opponent's king three times.
+                            </li>
+                            <li class="rule">
+                                A move that results in a double-check only counts as one check towards the "total check
+                                score."
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/351-3-check" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                    <li class="game-variant">
+                        <h2 class="title">King of the Hill</h2>
+                        <p class="description">
+                            King of the Hill or "KOTH" is an exciting variant in which the goal is to get your king to
+                            the
+                            center of the board or "top of the hill.''
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                Games can still end in the traditional ways of checkmate, stalemate and time-out.
+                            </li>
+                            <li class="rule">
+                                The game can also end when a player moves their king to any of the four central squares.
+                            </li>
+                            <li class="rule">
+                                e4, d4, e5, and d5 are "top of the hill" squares, winning the game on the spot for
+                                either White
+                                or Black, regardless of the nature of the position.
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/348-king-of-the-hill-koth" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                    <li class="game-variant">
+                        <h2 class="title">Chess960 (Fischer Random)</h2>
+                        <p class="description">
+                            Chess960, or Fischer Random, is a variant invented by the late World Champion Bobby Fischer.
+                            The
+                            rules of the game are the same as standard chess, but in an effort to reduce the impact of
+                            opening theory, the pieces have been randomly shuffled on each player's back rank.
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                Castling king-side (0-0) results in the King on the g-file and the Rook on the f-file;
+                            </li>
+                            <li class="rule">
+                                likewise, castling queen-side (0-0-0) leaves the King on the c-file and the Rook on the
+                                d-file.
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/347-chess960-fischer-random-chess" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                    <li class="game-variant">
+                        <h2 class="title">Fog of War</h2>
+                        <p class="description">
+                            In this variant, squares that your pieces can't move to are covered in 'fog.' You won't know
+                            where your opponent's pieces are unless your pieces can 'see' them!
+                        </p>
+                        <h3 class="rules-title">Rules</h3>
+                        <ol class="rules">
+                            <li class="rule">
+                                Squares you cannot move a piece to are covered in fog.
+                            </li>
+                            <li class="rule">
+                                The goal is not to checkmate the king, but to capture it.
+                            </li>
+                        </ol>
+                        <a href="https://support.chess.com/article/1668-what-is-fog-of-war-chess" class="read-more">
+                            Read More
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Swarnava Ghosh 2021 | All Rights Reserved
+    </footer>
+</body>
+
+</html>

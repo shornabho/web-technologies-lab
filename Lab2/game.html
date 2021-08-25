@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessNest - Play Game</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+    <img id="chessboard-background" src="./img/chessboard.png" alt="" usemap="#chessboard-map">
+    <map name="chessboard-map" id="chessboard-map"></map>
+    <script>
+
+        const addClickableArea = (map, attributes) => {
+            let area = document.createElement('area')
+            Object.keys(attributes).forEach((key) => {
+                area.setAttribute(key, attributes[key])
+            });
+            area.addEventListener("click", (e) => {
+                console.log(e.target)
+            })
+            map.appendChild(area)
+        }
+
+        const createChessboardImageMap = () => {
+            const chessboardMap = document.getElementById("chessboard-map")
+
+            let windowWidth = window.innerWidth;
+
+            let boardWidth = windowWidth;
+
+            let cellWidth = boardWidth / 8;
+
+            let cellLinks = [
+                "#rooks", "#knights", "#bishops", "#queens", "#kings", "#bishops", "#knights", "#rooks"
+            ]
+
+            for (let row = 1; row <= 8; row++) {
+                for (let column = 1; column <= 8; column++) {
+                    const cellId = (row - 1) * 8 + column;
+                    const coords = [(column - 1) * cellWidth, (row - 1) * cellWidth, column * cellWidth, row * cellWidth]
+                    let cellLink = null
+                    if (cellId <= 8)
+                        cellLink = cellLinks[cellId - 1]
+                    else if (cellId <= 16)
+                        cellLink = "#pawns"
+                    else if (cellId <= 48)
+                        cellLink = null
+                    else if (cellId <= 56)
+                        cellLink = "#pawns"
+                    else if (cellId <= 64)
+                        cellLink = cellLinks[64 - cellId]
+
+                    if (cellLink)
+                        addClickableArea(chessboardMap, { shape: "rect", coords: `${coords.join(", ")}`, href: `rules.html${cellLink}`, target: "_blank", alt: `${cellId}`, id: `${cellId}`, class: `cell-area ${cellLink}` })
+                    console.log(cellLink)
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (e) => {
+            createChessboardImageMap()
+
+        });
+
+
+    </script>
+</body>
+
+</html>
