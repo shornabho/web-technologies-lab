@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Information - India</title>
+    <!-- Fonts -->
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <nav class="top-navbar">
+        <div class="container">
+            <div class="nav-container">
+                <h1 class="nav-brand">
+                    <a href="index.html">Trippy!</a>
+                </h1>
+                <ul class="nav-links-container">
+                    <li class="nav-link">
+                        Destinations
+                    </li>
+                    <li class="nav-link">
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="page-title">Register</h1>
+        <hr>
+        <form>
+            <div class="input-group">
+                <label for="user-email" class="form-label">Email address</label>
+                <input type="email" class="form-field" id="user-email" required>
+                <small>
+                    We'll never share your email with anyone else.
+                </small>
+            </div>
+            <div class="input-group">
+                <label for="user-password" class="form-label">Password</label>
+                <input type="password" class="form-field" id="user-password" required>
+            </div>
+            <div class="input-group">
+                <label for="user-country" class="form-label">Country</label>
+                <select class="form-select mb-3" id="user-country" required>
+                    <option selected>India</option>
+                    <option value="1">United States</option>
+                    <option value="2">Albania</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="user-gender" class="form-label">Gender</label>
+                <br>
+                <input type="radio" class="" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label for="btnradio1">Male</label>
+                <input type="radio" class="" name="btnradio" id="btnradio2" autocomplete="off">
+                <label for="btnradio2">Female</label>
+                <input type="radio" class="" name="btnradio" id="btnradio3" autocomplete="off">
+                <label for="btnradio3">Other</label>
+            </div>
+
+            <div class="input-group">
+                <label for="user-dob" class="form-label">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="input-group">
+                <input type="checkbox" class="form-field" id="tnc-check">
+                <label for="tnc-check">
+                    I agree to all the terms and conditions.
+                </label>
+            </div>
+
+            <button type="submit" class="">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
