@@ -16,16 +16,25 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Amazon Books</title>
+    <style>
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #007185;
+        }
+    </style>
 </head>
 
 <body>
     <header>
 
         <nav class="top-navbar">
-            <div class="nav-brand">
+            <a href="./index.html" class="nav-brand">
                 <img src="./img/Amazon_logo_white.png" alt="">
-            </div>
-            <div class="delivery-location">
+            </a>
+            <div class="delivery-location d-none d-md-block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt"
                     viewBox="0 0 20 20">
                     <path
@@ -34,7 +43,7 @@
                 </svg>
                 India
             </div>
-            <div class="search-bar">
+            <div class="search-bar d-none d-md-block">
                 <form action="">
                     <div class="input-group mb-3">
                         <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -50,7 +59,7 @@
                     </div>
                 </form>
             </div>
-            <div class="language">
+            <div class="language d-none d-md-block">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
@@ -68,7 +77,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="accounts-and-lists">
+            <div class="accounts-and-lists d-none d-md-block">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
@@ -87,14 +96,14 @@
                 </ul>
 
             </div>
-            <div class="returns-and-orders">
+            <div class="returns-and-orders d-none d-md-block">
                 Returns
                 <br>
                 <b>& Orders</b>
             </div>
             <div class="cart">
                 <i class="bi bi-cart amazon-yellow" style=" font-size: 2rem;"></i>
-                Cart
+                <span class="d-none d-md-inline-block">Cart</span>
             </div>
         </nav>
 
@@ -169,7 +178,7 @@
     </header>
 
     <main>
-        <section class="landing-page-banner">
+        <section class="landing-page-banner" style="background-color: #007185;">
             <img src="./img/Amazon_book_landing.png" alt="">
             <img src="./img/Amazon_book_landing_bottom.png" alt="">
         </section>
@@ -177,55 +186,13 @@
             <div class="container-fluid">
                 <h1 class="section-header">Never Stop Learning at Amazon Books</h1>
                 <hr>
-                <div class="books-gallery">
-                    <div class="book">
-                        <img src="./img/books/book1.jpeg" alt="" class="book-cover">
-                        <h2 class="book-title">Adulting: How to Become a Grown-up in 535 Easy(ish) Steps</h2>
-                        <h3 class="book-author">Kelly Williams Brown</h3>
-                        <small class="book-type">Paperback</small>
-                        <h4 class="book-discounted-price">240.00</h4>
-                        <div class="book-rating amazon-yellow">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                    </div>
-
-                    <div class="book">
-                        <img src="./img/books/book2.jpg" alt="" class="book-cover">
-                        <h2 class="book-title">Adulting: How to Become a Grown-up in 535 Easy(ish) Steps</h2>
-                        <h3 class="book-author">Kelly Williams Brown</h3>
-                        <small class="book-type">Paperback</small>
-                        <h4 class="book-discounted-price">240.00</h4>
-                        <div class="book-rating amazon-yellow">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                    </div>
-
-                    <div class="book">
-                        <img src="./img/books/book3.jpg" alt="" class="book-cover">
-                        <h2 class="book-title">Adulting: How to Become a Grown-up in 535 Easy(ish) Steps</h2>
-                        <h3 class="book-author">Kelly Williams Brown</h3>
-                        <small class="book-type">Paperback</small>
-                        <h4 class="book-discounted-price">240.00</h4>
-                        <div class="book-rating amazon-yellow">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                    </div>
-                </div>
+                <div class="books-gallery"></div>
             </div>
         </section>
     </main>
 </body>
+
+<script src="./js/common/utilities.js"></script>
+<script src="./js/index.js"></script>
 
 </html>

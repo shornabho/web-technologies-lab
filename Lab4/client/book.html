@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/book.css">
+    <title>Amazon Books</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="top-navbar">
+            <a href="./index.html" class="nav-brand">
+                <img src="./img/Amazon_logo_white.png" alt="">
+            </a>
+            <div class="delivery-location d-none d-md-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt"
+                    viewBox="0 0 20 20">
+                    <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                India
+            </div>
+            <div class="search-bar d-none d-md-block">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Amazon Books</button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Amazon Books</a></li>
+                            <li><a class="dropdown-item" href="#">All Other Departments</a></li>
+                        </ul>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <button class="btn btn-warning" type="button" id="button-addon2">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="language d-none d-md-block">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Bengali</a></li>
+                            <li><a class="dropdown-item" href="#">Kannada</a></li>
+                            <li><a class="dropdown-item" href="#">Malayalam</a></li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="accounts-and-lists d-none d-md-block">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hello, Sign In
+                            <br>
+                            <b>Accounts & Lists</b> </a>
+                        <ul class="dropdown-menu dropdown-menu-light px-5 py-3"
+                            aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li class="d-flex">
+                                <button id="sign-in-button" type="button" class="  mx-auto" data-bs-toggle="modal"
+                                    data-bs-target="#sign-in-modal">Sign In</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="returns-and-orders d-none d-md-block">
+                Returns
+                <br>
+                <b>& Orders</b>
+            </div>
+            <div class="cart">
+                <i class="bi bi-cart amazon-yellow" style=" font-size: 2rem;"></i>
+                <span class="d-none d-md-block">Cart</span>
+            </div>
+        </nav>
+
+        <!-- Vertically centered modal -->
+        <div class="modal fade" id="sign-in-modal" tabindex="-1" aria-labelledby="sign-in-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sign-in-modal-title">
+                            Sign In
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="user-email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="user-email" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">
+                                    We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="user-password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="user-password">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-6">
+                                    <label for="user-country" class="form-label">Country</label>
+                                    <select class="form-select mb-3" id="user-country">
+                                        <option selected>India</option>
+                                        <option value="1">United States</option>
+                                        <option value="2">Albania</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="user-gender" class="form-label">Gender</label>
+                                    <br>
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                            autocomplete="off" checked>
+                                        <label class="btn btn-outline-warning" for="btnradio1">Male</label>
+
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="btnradio2">Female</label>
+
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="btnradio3">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="user-dob" class="form-label">Date of Birth</label>
+                                <input type="date" id="dob" name="dob">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="tnc-check">
+                                <label class="form-check-label" for="tnc-check">
+                                    I agree to all the terms and conditions.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-warning">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid py-3 pt-5 px-4">
+            <section id="book-info">
+                <div class="row">
+                    <div class="col-lg-3 left-column">
+                        <div class="cover-image">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/51+ehSCgmuL._SX317_BO1,204,203,200_.jpg"
+                                alt="">
+                        </div>
+
+                        <div class="other-book-images d-none d-md-block">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/719GCICs2JL.jpg" alt=""
+                                class="other-image">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/31Qj7-IDsWL.jpg" alt=""
+                                class="other-image">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81qWnmQou9L.jpg" alt=""
+                                class="other-image">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/41PUARBtbWL.jpg" alt=""
+                                class="other-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 center-column">
+                        <h1>
+                            <span class="title">
+                                A Thousand Splendid Suns
+                            </span>
+                            <span class="subtitle">
+                                Paperback – November 25, 2008
+                            </span>
+                        </h1>
+                        <div class="author">
+                            <span class="text-muted">by</span>
+                            <span class="author-name">Khaled Hosseini</span>
+                            <span class="text-muted">(Author)</span>
+                        </div>
+                        <div class="ratings">
+                            <div class="star-rating amazon-yellow">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="number-of-ratings">17,612</div>&nbsp;ratings
+                        </div>
+                        <hr>
+                        <table class="price-list m-4">
+                            <tbody>
+                                <tr class="mrp">
+                                    <td class="key">MRP:</td>
+                                    <td class="value">₹1,199.00</td>
+                                </tr>
+                                <tr class="selling-price">
+                                    <td class="key">Deal of the day:</td>
+                                    <td class="value amazon-red">₹1,090.00</td>
+                                </tr>
+                                <tr class="binding-type">
+                                    <td class="key"></td>
+                                    <td class="value">Paperback</td>
+                                </tr>
+                                <tr class="savings-plan">
+                                    <td class="key">You save:</td>
+                                    <td class="value amazon-red">₹109.00 (9%)</td>
+                                </tr>
+                                <tr class="tax-message">
+                                    <td class="key"></td>
+                                    <td class="value">Inclusive of all taxes</td>
+                                </tr>
+                                <tr class="stock-availability">
+                                    <td class="key"></td>
+                                    <td class="value amazon-color-success">In stock.</td>
+                                </tr>
+                                <tr class="delivery-info">
+                                    <td class="key amazon-link-blue">FREE delivery:</td>
+                                    <td class="value">Friday, Sep 24</td>
+                                </tr>
+                                <tr class="delivery-validity-message">
+                                    <td class="key"></td>
+                                    <td class="value">Order within 10 hrs and 50 mins.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <div class="description">
+                            <b>Propelled by the same superb instinct for storytelling that made <i>The Kite
+                                    Runner</i> a
+                                beloved classic, the #1 <i>New York Times</i> bestseller <i>A Thousand Splendid
+                                    Suns</i>
+                                is at once an incredible chronicle of thirty years of Afghan history and a deeply
+                                moving
+                                story of family, friendship, faith, and the salvation to be found in
+                                love.&nbsp;<br><br><b>“Just as good, if not better, than Khaled Hosseini’s
+                                    best-selling
+                                    first book, <i>The Kite Runner</i>.”—<i>Newsweek</i></b> </b><br><br>Khaled
+                            Hosseini
+                            returns with a beautiful, riveting, and haunting novel that confirms his place as one of
+                            the
+                            most important literary writers today.<br><br>Born a generation apart and with very
+                            different ideas about love and family, Mariam and Laila are two women brought jarringly
+                            together by war, by loss and by fate. As they endure the ever escalating dangers around
+                            them-in their home as well as in the streets of Kabul-they come to form a bond that
+                            makes
+                            them both sisters and mother-daughter to each other, and that will ultimately alter the
+                            course not just of their own lives but of the next generation. With heart-wrenching
+                            power
+                            and suspense, Hosseini shows how a woman's love for her family can move her to shocking
+                            and
+                            heroic acts of self-sacrifice, and that in the end it is love, or even the memory of
+                            love,
+                            that is often the key to survival.<br><br>
+                            <p>A stunning accomplishment, <i>A Thousand Splendid Suns</i> is a haunting,
+                                heartbreaking,
+                                compelling story of an unforgiving time, an unlikely friendship, and an
+                                indestructible
+                                love.</p>
+                        </div>
+                        <hr>
+                        <div class="meta-data-container row">
+                            <div class="col-sm-2  col-4 meta-data print-length">
+                                <span class="label">Print Length</span>
+                                <i class="bi bi-journals"></i>
+                                <span class="value">432 pages</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data language">
+                                <span class="label">Language</span>
+                                <i class="bi bi-translate"></i>
+                                <span class="value">English</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data publisher">
+                                <span class="label">Publisher</span>
+                                <i class="bi bi-building"></i>
+                                <span class="value">Penguin Publishing Group</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data publication-date">
+                                <span class="label">Publication Date</span>
+                                <i class="bi bi-calendar-event"></i>
+                                <span class="value">November 25, 2008</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data dimensions">
+                                <span class="label">Dimensions</span>
+                                <i class="bi bi-aspect-ratio"></i>
+                                <span class="value">5.13 x 0.98 x 8 inches</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data isbn-10">
+                                <span class="label">ISBN-10</span>
+                                <i class="bi bi-upc"></i>
+                                <span class="value">159448385X</span>
+                            </div>
+                            <div class="col-sm-2  col-4 meta-data isbn-13">
+                                <span class="label">ISBN-13</span>
+                                <i class="bi bi-upc"></i>
+                                <span class="value">978-0739489505</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 right-column"></div>
+                </div>
+            </section>
+            <hr>
+            <!-- Videos Section -->
+            <div class="videos">
+                <h2>Videos</h2>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="./js/common/utilities.js"></script>
+<script src="./js/common/loader.js"></script>
+<script src="./js/book.js"></script>
+
+</html>

@@ -1,0 +1,139 @@
+#book-info {
+	font-family: 'Amazon Ember', sans-serif;
+}
+
+#book-info .left-column {
+	padding: 0 1%;
+}
+#book-info .left-column .cover-image > img {
+	padding: 0 10% 10%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+#book-info .left-column .other-book-images {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+
+#book-info .left-column .other-book-images .other-image {
+	width: 22%;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	border: 1px #999 solid;
+}
+
+#book-info .center-column h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8rem;
+}
+#book-info .center-column .title {
+	font-size: 1em;
+	display: inline;
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+}
+
+#book-info .center-column .subtitle {
+	font-size: 0.9em;
+	color: #565959;
+	display: inline;
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+}
+
+#book-info .center-column .author {
+	font-size: 0.9em;
+}
+
+#book-info .center-column .ratings * {
+	display: inline-block;
+}
+
+#book-info .center-column .ratings .number-of-ratings {
+	font-size: 0.9em;
+	margin-left: 1rem;
+}
+
+#book-info .center-column hr {
+	margin: 0.5rem 0;
+	opacity: 0.15;
+}
+
+#book-info .center-column table.price-list {
+	border-collapse: collapse;
+}
+
+#book-info .center-column table.price-list td {
+	padding: 0 3px;
+	font-size: 0.9rem;
+	text-rendering: optimizeLegibility;
+}
+
+#book-info .center-column table.price-list * {
+	color: #565959;
+}
+
+#book-info .center-column table.price-list .key {
+	text-align: right;
+}
+
+#book-info .center-column .price-list .mrp > .value {
+	color: #565959;
+	text-decoration: line-through;
+}
+
+#book-info .center-column .price-list .selling-price {
+	vertical-align: top;
+}
+
+#book-info .center-column .price-list .selling-price > .value {
+	font-size: 1.3rem;
+}
+
+#book-info .center-column .price-list .binding-type > .value {
+	font-weight: bold;
+}
+
+#book-info .center-column .price-list .stock-availability > .value {
+	font-size: 1.5rem;
+	padding: 0.25em 0;
+}
+
+#book-info .center-column .price-list .delivery-info > .value,
+#book-info .center-column .price-list .delivery-info > .value * {
+	color: #000;
+	font-weight: bold;
+}
+
+#book-info .center-column .description {
+	padding: 1rem;
+	text-align: justify;
+	font-size: 0.875rem;
+}
+
+#book-info .center-column .meta-data-container .meta-data * {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+#book-info .center-column .meta-data-container .meta-data {
+	margin: 1rem 0;
+}
+
+#book-info .center-column .meta-data-container .meta-data > .label {
+	font-size: 0.875rem;
+}
+
+#book-info .center-column .meta-data-container .meta-data > i {
+	font-size: 1.8rem;
+}
+
+#book-info .center-column .meta-data-container .meta-data > .value {
+	font-size: 0.875rem;
+	font-weight: bold;
+	margin: 0.5rem 0;
+}
