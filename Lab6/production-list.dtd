@@ -1,0 +1,10 @@
+<!ELEMENT production-list (production+)>
+<!ELEMENT production (number,name,synopsis,director,playwright,cast-list)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT synopsis (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT playwright (#PCDATA)>
+<!ELEMENT cast-list (cast+)>
+<!ELEMENT cast (cast-name)>
+<!ELEMENT cast-name (#PCDATA)>
