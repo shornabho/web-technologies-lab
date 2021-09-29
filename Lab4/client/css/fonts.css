@@ -43,3 +43,21 @@ a:hover {
 	color: inherit;
 	text-decoration: inherit;
 }
+
+li:nth-child(n) {
+	list-style-image: url(../icons/book-list-icon.png);
+}
+
+li:nth-child(1) {
+	list-style-type: circle;
+	list-style-image: none;
+}
+
+li:nth-child(2) {
+	list-style-type: square;
+	list-style-image: none;
+}
+
+li:nth-child(3) {
+	list-style-image: url(https://www.w3schools.com/css/sqpurple.gif);
+}
