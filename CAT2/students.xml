@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+<CHRIST> 
+<CS>
+    <STUDENT>
+        <STU-NAME>Swarnava Ghosh</STU-NAME>
+        <STU-BRANCH>MCS</STU-BRANCH>
+        <STU-COLLEGE>CHRIST</STU-COLLEGE>
+        <STU-EMAIL>swarnava.ghosh@gmail.com</STU-EMAIL>
+    </STUDENT>
+    <STUDENT>
+        <STU-NAME>Bishal Deb</STU-NAME>
+        <STU-BRANCH>MCS</STU-BRANCH>
+        <STU-COLLEGE>CHRIST</STU-COLLEGE>
+        <STU-EMAIL>bishal.deb@gmail.com</STU-EMAIL>
+    </STUDENT>
+    <STUDENT>
+        <STU-NAME>Sourish Ghosh</STU-NAME>
+        <STU-BRANCH>BSc</STU-BRANCH>
+        <STU-COLLEGE>IHM</STU-COLLEGE>
+        <STU-EMAIL>sourish.ghosh@gmail.com</STU-EMAIL>
+    </STUDENT>
+</CS>
+</CHRIST>
