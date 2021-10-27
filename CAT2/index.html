@@ -30,7 +30,7 @@
                 <label for="name" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="name" required>
                 <div class="invalid-feedback">
-                    Please provide a valid name.
+                    Please provide a valid name. Only character values are allowed.
                 </div>
             </div>
             <div class="col-md-4">
@@ -47,7 +47,7 @@
                     <input type="text" class="form-control" id="username"
                         aria-describedby="usernamePrepend usernameFeedback" required>
                     <div id="usernameFeedback" class="invalid-feedback">
-                        Please provide a valid username.
+                        Please provide a valid username. First character should be a capital letter.
                     </div>
                 </div>
             </div>
@@ -56,7 +56,10 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" required>
                 <div class="invalid-feedback">
-                    Please provide a valid password.
+                    Please provide a valid password. Passwords must contain a minimum of 1 lower case letter [a-z], 1
+                    upper case letter [A-Z], 1 numeric character [0-9], 1 special character, and at least 1 upper case,
+                    numeric, and special character must be EMBEDDED somewhere in the middle of the password, and not
+                    just be the first or the last character of the password string.
                 </div>
             </div>
 
@@ -72,7 +75,7 @@
                 <label for="age" class="form-label">Age</label>
                 <input type="number" class="form-control" id="age" required>
                 <div class="invalid-feedback">
-                    Please provide a valid age.
+                    Age should not be negative number.
                 </div>
             </div>
 
@@ -80,7 +83,7 @@
                 <label for="phoneNumber" class="form-label">Phone Number</label>
                 <input type="text" class="form-control" id="phoneNumber" required>
                 <div class="invalid-feedback">
-                    Please provide a valid phone number.
+                    Phone number should have exactly 10 digits.
                 </div>
             </div>
 
