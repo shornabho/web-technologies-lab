@@ -91,7 +91,7 @@ registrationForm.addEventListener('submit', (event) => {
 	localStorage.setItem('username', usernameField.value);
 	localStorage.setItem('phoneNumber', phoneNumberField.value);
 
-	document.cookie = `username:${usernameField.value}; phoneNumber:${phoneNumberField.value}`;
+	document.cookie = `username: ${usernameField.value}, phoneNumber: ${phoneNumberField.value}`;
 
 	var xmlDoc = document.implementation.createDocument(null, 'students');
 });

@@ -1,0 +1,5 @@
+CREATE TABLE lab10 (
+  id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+  description TEXT NOT NULL,
+  dueDate DATE NOT NULL
+);
